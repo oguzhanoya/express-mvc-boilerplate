@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  #app
+    img(src="/img/logo.png" alt="express logo")
+    h2 Welcome to Your #{title} App
+    h3 Essential Links
+    ul
+      li
+        a.badge.green(href='http://expressjs.com/en/api.html', target='_blank') Express Docs
+      li
+        a.badge.red(href='http://mongoosejs.com/docs/guide.html', target='_blank') Mongoose Docs
+      li
+        a.badge.blue(href='https://node.cool', target='_blank') Awesome Node.js
