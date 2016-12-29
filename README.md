@@ -61,7 +61,6 @@ $ cd myproject
 
 # Install dependencies
 $ npm install
-
 $ bower install
 
 $ node app.js
