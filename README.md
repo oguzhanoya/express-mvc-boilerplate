@@ -1,6 +1,6 @@
 ﻿Express MVC Boilerplate
 ==================================
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/oguzhanoya/express-mvc-boilerplate.svg?branch=master)](https://travis-ci.org/oguzhanoya/express-mvc-boilerplate)
 
 > A simple mvc boilerplate for express.js (gulp + expressjs + nodemon + browser-sync)
 
