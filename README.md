@@ -1,4 +1,4 @@
-﻿Express MVC Boilerplate
+Express MVC Boilerplate
 ==================================
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/oguzhanoya/express-mvc-boilerplate.svg?branch=master)](https://travis-ci.org/oguzhanoya/express-mvc-boilerplate)
 
@@ -14,6 +14,7 @@
 * gulp - automate workflow
 
 ## Prerequisites
+
 * Node.js `http://nodejs.org`
 * MongoDB `brew install mongodb`
 
@@ -52,9 +53,9 @@
 
 ## Getting Started
 
-```
 The easiest way to get started is to clone the repository:
 
+```sh
 # Get the latest snapshot
 $ git clone https://github.com/oguzhanoya/express-mvc-boilerplate.git myproject
 $ cd myproject
@@ -68,11 +69,27 @@ $ node app.js
 
 ## Development
 
+Your app should now be running on [localhost:7000](http://localhost:7000/).
+
     gulp
 
 ## Test
 
     npm test
+
+## Deploy
+
+Make sure you have the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+
+```
+heroku create
+git push heroku master
+heroku open
+```
+
+Alternatively, you can deploy your own copy of the app using the web-based flow:
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## License
 
