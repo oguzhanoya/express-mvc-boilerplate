@@ -69,9 +69,9 @@ $ node app.js
 
 ## Development
 
-Your app should now be running on [localhost:7000](http://localhost:7000/).
-
     gulp
+    
+Your app should now be running on [localhost:7000](http://localhost:7000/).
 
 ## Test
 
