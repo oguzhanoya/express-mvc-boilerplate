@@ -10,7 +10,8 @@
   "scripts": {
     "build": "npm install && gulp",
     "start": "node app.js",
-    "test": "mocha -R spec ./test/*.js"
+    "test": "mocha -R spec ./test/*.js",
+    "lint": "eslint .; exit 0"
   },
   "license": "MIT",
   "dependencies": {
@@ -24,6 +25,9 @@
   },
   "devDependencies": {
     "browser-sync": "^2.16.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.1.0",
     "gulp-plumber": "^1.1.0",

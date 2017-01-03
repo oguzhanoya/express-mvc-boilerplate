@@ -1,6 +1,6 @@
 {
-  "name": "express-starter",
-  "description": "express starter template",
+  "name": "express-mvc-boilerplate",
+  "description": "A simple mvc boilerplate for express.js",
   "version": "0.0.1",
   "main": "app.js",
   "license": "ISC",
