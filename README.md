@@ -19,35 +19,38 @@ Express MVC Boilerplate
 * MongoDB `brew install mongodb`
 
 ## Project Structure
-```
+```sh
 .
 ├── app/
-│   └── controllers           = contains controller files
-│   └── models                = contains model files
-│   └── views                 = contains express view (pug) files
-│   └── routes.js             = routes config file
+│   └── controllers           # contains controller files
+│   └── models                # contains model files
+│   └── views                 # contains express view (pug) files
+│   └── routes.js             # routes config file
 ├── config/
-│   ├── index.js              = environment config file
-│   └── db.js                 = db config
-├── public/                   = contains static assets
-│   ├── components            = bower components folder
+│   ├── index.js              # environment config file
+│   └── db.js                 # db config
+├── public/                   # contains static assets
+│   ├── components            # bower components folder
 │   │   └── ...
-│   ├── favicon               = favicon folder
-│   ├── fonts                 = contains font files
-│   ├── css                   = all files will generate from gulp
-│   ├── styl                  = contains style sheets (stylus)
-│   ├── js                    = contains js files
-│   └── img                   = contains image files
+│   ├── favicon               # favicon folder
+│   ├── fonts                 # contains font files
+│   ├── css                   # all files will generate from gulp
+│   ├── styl                  # contains style sheets (stylus)
+│   ├── js                    # contains js files
+│   └── img                   # contains image files
 ├── test/
-│   └── spec.js               = unit & func tests
-├── .bowerrc                  = bower config
-├── .bower.json               = bower dependencies
-├── .Procfile                 = process file for heroku implementation
-├── .gitignore                = specifies intentionally untracked files to ignore
-├── .editorconfig.js          = editor config
-├── .gulpfile.js              = gulp config
-├── app.js                    = app setup file
-└── package.json              = build scripts and dependencies
+│   └── spec.js               # unit & func tests
+├── .bowerrc                  # bower config
+├── .bower.json               # bower dependencies
+├── .Procfile                 # process file for heroku implementation
+├── .gitignore                # specifies intentionally untracked files to ignore
+├── .editorconfig.js          # editor config
+├── .gulpfile.js              # gulp config
+├── .eslintrc.yml             # eslint config
+├── .eslintignore             # eslint ignore specific files and directories config file
+├── .travis.yml               # travis ci config
+├── app.js                    # app setup file
+└── package.json              # build scripts and dependencies
 
 ```
 
@@ -77,6 +80,10 @@ Your app should now be running on [localhost:7000](http://localhost:7000/).
 
     npm test
 
+## Lint
+
+    npm run lint
+
 ## Deploy
 
 Make sure you have the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
@@ -86,10 +93,6 @@ heroku create
 git push heroku master
 heroku open
 ```
-
-Alternatively, you can deploy your own copy of the app using the web-based flow:
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## License
 
