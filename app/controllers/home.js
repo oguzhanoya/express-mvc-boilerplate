@@ -11,8 +11,11 @@ router.get('/', (req, res, next) => {
   const name = Utils.randomString(5);
 
   // new todo model
-  const todo = new Todo({ name, done: false });
-  todo.save();
+  const newTodo = new Todo({ name, done: false });
+
+  newTodo.save()
+    .then((todo) => { console.log(`Success! ${todo.name} saved! \n${todo}`); })
+    .catch((err) => { console.log(err); });
 
   res.render('index', { title: 'Express' });
 });
