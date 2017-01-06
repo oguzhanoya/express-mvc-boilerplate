@@ -11,7 +11,7 @@
     "build": "npm install && gulp",
     "start": "node app.js",
     "test": "mocha -R spec ./test/*.js",
-    "lint": "eslint .; exit 0"
+    "lint": "eslint ./ || exit 0"
   },
   "license": "MIT",
   "dependencies": {
