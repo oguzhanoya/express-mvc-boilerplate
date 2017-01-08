@@ -32,4 +32,8 @@ const config = {
   },
 };
 
+config[env].isDev = env === 'development';
+config[env].isTest = env === 'test';
+config[env].isProd = env === 'production';
+
 module.exports = config[env];
