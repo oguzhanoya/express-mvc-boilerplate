@@ -1,21 +1,23 @@
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
+const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const app = express();
 
-// database config
-const db = require('./config/db');
-
 // config
 const config = require('./config/config');
+
+// database config
+const db = require('./config/db');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'pug');
 
+app.use(logger(config.isProd ? 'combined' : 'dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -32,28 +34,14 @@ app.use((req, res, next) => {
   next(err);
 });
 
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use((err, req, res, next) => {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err,
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
+// error handler
 app.use((err, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message; // eslint-disable-line no-param-reassign
+  res.locals.error = config.isDev ? err : {}; // eslint-disable-line no-param-reassign
+  // render the error page
   res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {},
-  });
+  res.render('error');
 });
 
 db.on('connected', () => {
