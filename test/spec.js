@@ -1,5 +1,5 @@
-// production environment
-process.env.NODE_ENV = 'production';
+// test environment
+process.env.NODE_ENV = 'test';
 
 const app = require('../app');
 const request = require('supertest')(app);
