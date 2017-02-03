@@ -17,36 +17,31 @@ gulp.task('watch', () => {
   gulp.watch('./public/styl/*.styl', ['stylus']);
 });
 
-gulp.task('browser-sync', () => {
+gulp.task('browser-sync', ['nodemon'], () => {
   browserSync.init(null, {
     proxy: `http://localhost:${config.server.port}`,
-    files: ['public/**/*.*'],
+    files: ['public/**/*.*', '**.js'],
     browser: 'google chrome',
     port: 7000,
   });
 });
 
-gulp.task('develop', () => {
-  nodemon({
-    script: 'app.js',
-    ext: 'js pug',
-    env: { NODE_ENV: 'development' },
-    stdout: false,
-    // eslint-disable-next-line func-names
-  }).on('readable', function () {
-    this.stdout.on('data', (chunk) => {
-      if (/^App listening on/.test(chunk)) {
-        reload();
-      }
-    });
-    this.stdout.pipe(process.stdout);
-    this.stderr.pipe(process.stderr);
-  });
-});
+gulp.task('nodemon', cb => nodemon({
+  exec: 'node --debug',
+  script: 'app.js',
+  ext: 'js pug',
+  env: { NODE_ENV: 'development', DEBUG: 'myapp:*' },
+})
+.once('start', cb)
+.on('restart', () => {
+  setTimeout(() => {
+    browserSync.reload({ stream: false });
+  }, 500);
+}));
 
 gulp.task('default', [
   'stylus',
-  'develop',
+  'nodemon',
   'watch',
   'browser-sync',
 ]);

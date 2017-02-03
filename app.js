@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const app = express();
+const debug = require('debug')('myapp:app');
 
 // config
 const config = require('./config/config');
@@ -46,7 +47,7 @@ app.use((err, req, res, next) => {
 
 db.on('connected', () => {
   app.listen(config.server.port, config.server.hostname, () => {
-    console.log(`App listening on ${config.server.hostname} port: ${config.server.port}`);
+    debug(`App listening on ${config.server.hostname} port: ${config.server.port}`);
     app.emit('appStarted');
   });
 });
