@@ -16,25 +16,25 @@
   },
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.16.0",
     "cookie-parser": "^1.4.3",
     "debug": "^2.2.0",
-    "express": "^4.14.0",
-    "mongoose": "^4.6.1",
-    "morgan": "^1.7.0",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.8.0",
     "pug": "^2.0.0-beta6",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.16.0",
-    "eslint": "^3.12.2",
-    "eslint-config-airbnb-base": "^11.0.0",
+    "browser-sync": "^2.18.7",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.5.0",
     "mocha": "^3.1.0",
-    "supertest": "^2.0.0"
+    "supertest": "^3.0.0"
   }
 }
