@@ -27,7 +27,7 @@ const config = {
       hostname: process.env.HOSTNAME || 'localhost',
     },
     database: {
-      url: 'mongodb://localhost/express-production',
+      url: 'mongodb://mongo:27017/express-production',
     },
   },
 };
