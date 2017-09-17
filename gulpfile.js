@@ -3,7 +3,7 @@ const stylus = require('gulp-stylus');
 const nodemon = require('gulp-nodemon');
 const browserSync = require('browser-sync');
 
-const reload = browserSync.reload;
+const { reload } = browserSync;
 const config = require('./config/config');
 
 gulp.task('stylus', () => {
@@ -32,12 +32,12 @@ gulp.task('nodemon', cb => nodemon({
   ext: 'js pug',
   env: { NODE_ENV: 'development', DEBUG: 'myapp:*' },
 })
-.once('start', cb)
-.on('restart', () => {
-  setTimeout(() => {
-    browserSync.reload({ stream: false });
-  }, 500);
-}));
+  .once('start', cb)
+  .on('restart', () => {
+    setTimeout(() => {
+      browserSync.reload({ stream: false });
+    }, 500);
+  }));
 
 gulp.task('default', [
   'stylus',
