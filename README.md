@@ -84,6 +84,18 @@ Your app should now be running on [localhost:7000](http://localhost:7000/).
 
     npm run lint
 
+## Docker Support
+
+* Docker `https://docs.docker.com/engine/installation/`
+
+```
+# Build the project
+docker-compose build  
+
+# Start the application
+docker-compose up
+```
+
 ## Deploy
 
 Make sure you have the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
