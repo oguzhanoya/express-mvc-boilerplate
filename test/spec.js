@@ -10,6 +10,9 @@ describe('Example unit test', () => {
       done();
     });
   });
+  after(() => {
+    process.exit();
+  });
 
   it('should return 404 page', (done) => {
     request

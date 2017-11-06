@@ -19,22 +19,22 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
-    "express": "^4.16.1",
-    "mongoose": "^4.11.13",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
     "morgan": "^1.9.0",
     "pug": "^2.0.0-rc.4",
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
     "browser-sync": "^2.18.7",
-    "eslint": "^4.7.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.5.0",
-    "mocha": "^3.1.0",
+    "mocha": "^4.0.1",
     "supertest": "^3.0.0"
   }
 }
